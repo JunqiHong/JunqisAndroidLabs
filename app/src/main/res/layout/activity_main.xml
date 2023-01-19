@@ -27,12 +27,6 @@
         app:layout_constraintHorizontal_bias="0.5"
         app:layout_constraintStart_toStartOf="parent" />
 
-    <TextView
-        android:id="@+id/textView"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="TextView dedede"
-        tools:layout_editor_absoluteX="174dp"
-        tools:layout_editor_absoluteY="406dp" />
+
 
 </androidx.constraintlayout.widget.ConstraintLayout>
