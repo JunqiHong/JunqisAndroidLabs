@@ -4,4 +4,5 @@ import androidx.lifecycle.ViewModel;
 
 public class MainActivityViewModel extends ViewModel {
     public String editString;
+    public Boolean isSelected;
 }
