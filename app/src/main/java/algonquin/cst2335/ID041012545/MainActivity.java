@@ -3,6 +3,7 @@ package algonquin.cst2335.ID041012545;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.lifecycle.ViewModelProvider;
 
+import android.graphics.drawable.Drawable;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
@@ -34,6 +35,26 @@ public class MainActivity extends AppCompatActivity {
         binding.switch1.setOnClickListener((param1) ->{
 
             Toast.makeText(MainActivity.this, "This is the message on screen for switch", Toast.LENGTH_LONG).show();
+        });
+
+        new CompoundButton.OnCheckedChangeListener(){
+            @Override
+            public void onCheckedChanged(CompoundButton compoundButton, boolean b){
+
+            }
+        };
+
+        Drawable d = getResources().getDrawable(R.drawable.app_icon);
+        int h = d.getIntrinsicHeight();
+        int w = d.getIntrinsicWidth();
+
+        binding.imageButton.setOnClickListener((param1) ->{
+
+            Toast
+                    .makeText(MainActivity.this, "Height of image is: " +h + " Width of image is: " + w,Toast.LENGTH_LONG)
+                    .show();
+
+
         });
 
         new CompoundButton.OnCheckedChangeListener(){
