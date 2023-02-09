@@ -15,7 +15,7 @@ public class MainActivity extends AppCompatActivity {
                         //R means res, layout is the folder, activity-main is the file
 
 
-        }
+
 
 
     }
