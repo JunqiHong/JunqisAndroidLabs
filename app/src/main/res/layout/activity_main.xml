@@ -5,9 +5,10 @@
     android:id="@+id/button"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-
-
-
+    android:layout_marginTop="27dp"
+    android:layout_marginBottom="27dp"
+    android:layout_marginLeft="48dp"
+    android:layout_marginRight="48dp"
     tools:context=".MainActivity">
 
     <Button
@@ -16,7 +17,13 @@
         android:layout_height="wrap_content"
         android:layout_marginStart="32dp"
         android:layout_marginTop="32dp"
-        android:text="Button"
+        android:text="Button1"
+
+        android:nextFocusUp="@id/button1"
+        android:nextFocusDown="@id/button1"
+        android:nextFocusRight="@id/button2"
+        android:nextFocusLeft="@id/button3"
+
         app:layout_constraintEnd_toStartOf="@+id/button2"
         app:layout_constraintHorizontal_bias="0.5"
         app:layout_constraintStart_toStartOf="parent"
@@ -27,7 +34,12 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="32dp"
-        android:text="Button"
+        android:text="Button2"
+
+        android:nextFocusUp="@id/button2"
+        android:nextFocusDown="@id/button2"
+        android:nextFocusRight="@id/button3"
+        android:nextFocusLeft="@id/button1"
         app:layout_constraintEnd_toStartOf="@+id/button3"
         app:layout_constraintHorizontal_bias="0.5"
         app:layout_constraintStart_toEndOf="@+id/button1"
@@ -38,7 +50,12 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="32dp"
-        android:text="Button"
+        android:text="Button3"
+
+        android:nextFocusUp="@id/button3"
+        android:nextFocusDown="@id/button3"
+        android:nextFocusRight="@id/button1"
+        android:nextFocusLeft="@id/button2"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.5"
         app:layout_constraintStart_toEndOf="@+id/button2"
@@ -55,8 +72,8 @@
 
     <Switch
         android:id="@+id/switch1"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
+        android:layout_width="94dp"
+        android:layout_height="48dp"
         android:layout_marginEnd="32dp"
         android:text="@string/spin_message"
         app:layout_constraintBottom_toBottomOf="@+id/imageView"
