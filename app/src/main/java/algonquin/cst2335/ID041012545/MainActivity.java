@@ -23,6 +23,7 @@ public class MainActivity extends AppCompatActivity {
         setContentView(R.layout.activity_main);
 
         switch1 = (Switch) findViewById(R.id.switch1);
+        imageView = findViewById(R.id.imageView);
         switch1.setOnCheckedChangeListener((btn, isChecked) ->{
             if (isChecked)
             {
