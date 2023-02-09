@@ -1,6 +1,8 @@
 <resources>
     <string name="app_name">Junqi\'s Android Labs</string>
     <string name="hello_message">Hello world!</string>
-    <string name="button_message">I\'m a button</string>
+    <string name="button_message1">button1</string>
+    <string name="button_message2">button2</string>
+    <string name="button_message3">button3</string>
     <string name="spin_message">Spin flag</string>
 </resources>
