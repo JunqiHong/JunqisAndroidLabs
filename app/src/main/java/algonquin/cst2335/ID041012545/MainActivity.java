@@ -40,9 +40,6 @@ public class MainActivity extends AppCompatActivity {
         });
 
 
-
-
-
     }
 
     /**The function is to check the complexity of the password
