@@ -62,7 +62,7 @@ public class MainActivity extends AppCompatActivity {
 
         foundUpperCase = foundLowerCase = foundNumber = foundSpecial = false;
 
-        if(!foundUpperCase)
+        if( ! foundUpperCase)
         {
 
             Toast.makeText(getApplicationContext(), "missing a upper case letter", Toast.LENGTH_SHORT).show();
