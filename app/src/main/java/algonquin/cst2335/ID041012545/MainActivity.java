@@ -37,6 +37,17 @@ public class MainActivity extends AppCompatActivity {
             String password = et.getText().toString();
 
             checkPasswordComplexity(password);
+
+            boolean validPassword =checkPasswordComplexity(password);
+
+            if(validPassword){
+                tv.setText("Your password meets the requirements");
+            }
+            else{
+                tv.setText("You shall not pass!");
+            }
+
+
         });
 
 
@@ -87,4 +98,7 @@ public class MainActivity extends AppCompatActivity {
             return true; //only get here if they're all true
 
     }
+
+
+
 }
