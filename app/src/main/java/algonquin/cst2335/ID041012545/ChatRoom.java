@@ -10,10 +10,14 @@ import androidx.appcompat.app.AppCompatActivity;
 import androidx.lifecycle.ViewModelProvider;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
+import androidx.room.Room;
 
 import java.text.SimpleDateFormat;
 import java.util.ArrayList;
 import java.util.Date;
+import java.util.List;
+import java.util.concurrent.Executor;
+import java.util.concurrent.Executors;
 
 import algonquin.cst2335.ID041012545.data.ChatMessage;
 import algonquin.cst2335.ID041012545.data.ChatViewModel;
@@ -26,11 +30,20 @@ public class ChatRoom extends AppCompatActivity {
 
     ActivityChatRoomBinding binding;
     ArrayList<ChatMessage> messages;
+
     private RecyclerView.Adapter myAdapter;
     ChatViewModel chatModel;
+
+    ChatMessageDAO mDAO;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
+
+        //get a database
+        MessageDatabase db = Room.databaseBuilder(getApplicationContext(), MessageDatabase.class, "database-name").build();
+        ChatMessageDAO mDAO = db.cmDAO();
+
+
         binding = ActivityChatRoomBinding.inflate(getLayoutInflater());
 
         chatModel = new ViewModelProvider(this).get(ChatViewModel.class);
@@ -48,6 +61,14 @@ public class ChatRoom extends AppCompatActivity {
             String currentDateAndTime = sdf.format(new Date());
             ChatMessage chm= new ChatMessage(binding.textInput.getText().toString(), currentDateAndTime, true);
             messages.add(chm);
+
+            Executor thread = Executors.newSingleThreadExecutor();
+            thread.execute(  () -> {
+                    long id = mDAO.insertMessage(chm);
+                    chm.id = (int) id;
+            });
+            //insert into database
+            mDAO.insertMessage(chm);
             myAdapter.notifyItemInserted(messages.size()-1);
             //clear the previous text:
             binding.textInput.setText("");
