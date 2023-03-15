@@ -18,7 +18,7 @@ public class ChatMessage {
 
     @PrimaryKey(autoGenerate = true) //database autogenerate id
     @ColumnInfo(name="ID")
-    public int id;
+    public long id;
 
 
 
