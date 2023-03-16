@@ -60,14 +60,13 @@ public class ChatRoom extends AppCompatActivity {
             chatModel.messages.postValue(messages);
         }
 
-        setContentView(binding.getRoot());
 
 //        if(messages == null)
 //        {
 //            chatModel.messages.postValue(messages = new ArrayList<ChatMessage>());
 //        }
 //
-//        setContentView(binding.getRoot());
+        setContentView(binding.getRoot());
 
         binding.button.setOnClickListener(click->{
             SimpleDateFormat sdf = new SimpleDateFormat("EEEE, dd-MMM-yyyy hh-mm-ss a");
