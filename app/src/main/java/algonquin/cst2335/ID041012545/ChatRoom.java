@@ -4,10 +4,8 @@ import android.os.Bundle;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.TextView;
-import com.google.android.material.snackbar.Snackbar;
 
 import androidx.annotation.NonNull;
-import androidx.appcompat.app.AlertDialog;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.fragment.app.FragmentManager;
 import androidx.fragment.app.FragmentTransaction;
@@ -18,9 +16,7 @@ import androidx.room.Room;
 
 import java.text.SimpleDateFormat;
 import java.util.ArrayList;
-import java.util.Collection;
 import java.util.Date;
-import java.util.List;
 import java.util.concurrent.Executor;
 import java.util.concurrent.Executors;
 
@@ -143,7 +139,7 @@ public class ChatRoom extends AppCompatActivity {
         });
 
 
-        chatModel.selectedmessages.observe(this, (newMessageValue) -> {
+        chatModel.selectedMessage.observe(this, (newMessageValue) -> {
 
             MessageDetailsFragment chatFragment = new MessageDetailsFragment(newMessageValue);
             FragmentManager fMgr = getSupportFragmentManager();
@@ -166,7 +162,7 @@ public class ChatRoom extends AppCompatActivity {
             itemView.setOnClickListener(clk -> {
                 int position = getAbsoluteAdapterPosition();
                 ChatMessage clickedMessage = messages.get(position);
-                chatModel.selectedmessages.postValue(clickedMessage);
+                chatModel.selectedMessage.postValue(clickedMessage);
 
 /*
                 AlertDialog.Builder builder = new AlertDialog.Builder(ChatRoom.this);

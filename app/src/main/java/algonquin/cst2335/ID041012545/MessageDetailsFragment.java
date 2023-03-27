@@ -24,8 +24,8 @@ public class MessageDetailsFragment extends Fragment {
 
         binding.message.setText(selected.getMessage());
         binding.time.setText(selected.getTimeSent());
-        binding.sendReceive.setText(selected.getIsSentButton() ? "Send" : "Receive");
-        binding.databaseID.setText("Id = " + selected.id);
+        binding.sendreceive.setText(selected.getIsSentButton() ? "Send" : "Receive");
+        binding.database.setText("Id = " + selected.id);
 
         View rootView = binding.getRoot();
         if (getResources().getConfiguration().smallestScreenWidthDp < 600) {
