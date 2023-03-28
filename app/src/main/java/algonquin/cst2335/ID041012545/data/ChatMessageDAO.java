@@ -1,4 +1,4 @@
-package algonquin.cst2335.ID041012545;
+package algonquin.cst2335.ID041012545.data;
 
 import androidx.room.Dao;
 import androidx.room.Delete;

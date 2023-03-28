@@ -1,4 +1,4 @@
-package algonquin.cst2335.ID041012545;
+package algonquin.cst2335.ID041012545.data;
 import android.os.Bundle;
 import android.view.LayoutInflater;
 import android.view.View;

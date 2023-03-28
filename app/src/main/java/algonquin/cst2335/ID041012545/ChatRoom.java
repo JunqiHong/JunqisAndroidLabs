@@ -21,7 +21,10 @@ import java.util.concurrent.Executor;
 import java.util.concurrent.Executors;
 
 import algonquin.cst2335.ID041012545.data.ChatMessage;
+import algonquin.cst2335.ID041012545.data.ChatMessageDAO;
 import algonquin.cst2335.ID041012545.data.ChatViewModel;
+import algonquin.cst2335.ID041012545.data.MessageDatabase;
+import algonquin.cst2335.ID041012545.data.MessageDetailsFragment;
 import algonquin.cst2335.ID041012545.databinding.ActivityChatRoomBinding;
 import algonquin.cst2335.ID041012545.databinding.ReceiveMessageBinding;
 import algonquin.cst2335.ID041012545.databinding.SentMessageBinding;
