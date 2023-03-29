@@ -1,6 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
     <string name="app_name">Junqi\'s Android Labs</string>
-    <string name="hello_message">你好世界！</string>
-    <string name="button_message">按钮</string>
+    <string name="hello_message">输入城市</string>
+    <string name="button_message">天气预报</string>
+    <string name="hint_message">输入城市</string>
 </resources>
